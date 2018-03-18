@@ -1087,7 +1087,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
 		collapsible: false,
 		tbar: new Ext.toolbar.Toolbar({
 			enableOverflow: true,
-			items: [
+			items: FileMenu.concat([
 
 				{
 					hidden: (!viewConfig.primitiveGroup),
@@ -1498,6 +1498,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
 										});
 									}
 								}, {
+									hidden: (!viewConfig.showImportExport),
 									text: getText("Insight Maker File..."),
 									handler: importInsightMaker
 								},
@@ -1513,6 +1514,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
 							text: "Export",
 							glyph: 0xf019,
 							menu: [{
+									hidden: (!viewConfig.showImportExport),
 									text: getText("Download Insight Maker File"),
 									handler: function(){
 										/*downloadFile("Model.InsightMaker", getGraphXml(graph).replace(/mxGraphModel/g,"InsightMakerModel"));*/
@@ -1641,7 +1643,7 @@ var RibbonPanel = function(graph, mainPanel, configPanel) {
 				}
 				
 
-			]
+			])
 		})
 
 	});

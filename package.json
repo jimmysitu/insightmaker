@@ -1,0 +1,7 @@
+{
+	"name": "InsightMaker Desktop",
+	"main": "examples/full.html",
+	"window": {
+		"icon": "images/icons/icon.png"
+	}
+}
